@@ -1,4 +1,3 @@
-# acostajonathan.github.io
 # Portfolio Template
 
 A simple 3-page portfolio site (Home / Resume / Projects) built with plain HTML, CSS and a touch of JS — no build tools, no frameworks. Ready to host on GitHub Pages.
