@@ -22,6 +22,10 @@
     </ul>
     <a href="index.html" class="nav-title">Your Name<span>.</span></a>
     <div class="nav-social">
+      <a href="mailto:you@example.com">
+        <svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.02 5.61a1.2 1.2 0 0 0 1.5 0L19.8 6H4.2zM4 7.76V18h16V7.76l-6.99 5.59a2.7 2.7 0 0 1-3.38 0L4 7.76z"/></svg>
+        <span class="label">Email</span>
+      </a>
       <a href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
         <span class="label">LinkedIn</span>
@@ -33,75 +37,348 @@
 <header class="page-header wrap">
   <p class="section-label">Projects</p>
   <h1>A few things I've built.</h1>
-  <p>Short intro line about the kinds of projects below — coursework, personal builds, competitions, or work samples.</p>
+  <p>Pick a company/team below to see the projects from that role, each with the problem, tools, challenges, and results — plus a photo gallery at the bottom. Use the arrows on each photo to browse.</p>
+
+  <!-- EDIT: rename these three options/panels to match your own companies or teams -->
+  <div class="company-select-wrap">
+    <label for="company-select">Viewing projects from</label>
+    <select id="company-select" class="company-select">
+      <option value="ford">Ford</option>
+      <option value="tesla">Tesla</option>
+      <option value="coopersurgical">Coopersurgical</option>
+    </select>
+  </div>
 </header>
 
-<section class="wrap" style="padding-bottom: 4rem;">
-  <div class="projects-grid">
+<section class="wrap" style="padding-bottom: 2rem;">
 
-    <!-- ===== Project card — duplicate this whole <article> block for each project ===== -->
-    <article class="project-card">
-      <div class="thumb">
-        <img src="images/project-placeholder-1.jpg" alt="" />
-      </div>
-      <h3>[Project Name]</h3>
-      <p>One or two sentences on what it is and what problem it solves.</p>
-      <div class="tags">
-        <span>Tag One</span>
-        <span>Tag Two</span>
-      </div>
-      <a class="learn-more" href="#">Learn More →</a>
-    </article>
+  <div class="tab-panel active" id="panel-ford" role="tabpanel">
+    
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+    
+    <div class="gallery-section">
+      <p class="section-label">Gallery</p>
+      <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 6</span>
+        </div>
+    </div>
+  </div>
 
-    <article class="project-card">
-      <div class="thumb">
-        <img src="images/project-placeholder-2.jpg" alt="" />
-      </div>
-      <h3>[Project Name]</h3>
-      <p>One or two sentences on what it is and what problem it solves.</p>
-      <div class="tags">
-        <span>Tag One</span>
-        <span>Tag Two</span>
-      </div>
-      <a class="learn-more" href="#">Learn More →</a>
-    </article>
+  <div class="tab-panel" id="panel-tesla" role="tabpanel">
+    
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+    
+    <div class="gallery-section">
+      <p class="section-label">Gallery</p>
+      <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 6</span>
+        </div>
+    </div>
+  </div>
 
-    <article class="project-card">
-      <div class="thumb">
-        <img src="images/project-placeholder-3.jpg" alt="" />
-      </div>
-      <h3>[Project Name]</h3>
-      <p>One or two sentences on what it is and what problem it solves.</p>
-      <div class="tags">
-        <span>Tag One</span>
-        <span>Tag Two</span>
-      </div>
-      <a class="learn-more" href="#">Learn More →</a>
-    </article>
-
-    <article class="project-card">
-      <div class="thumb">
-        <img src="images/project-placeholder-4.jpg" alt="" />
-      </div>
-      <h3>[Project Name]</h3>
-      <p>One or two sentences on what it is and what problem it solves.</p>
-      <div class="tags">
-        <span>Tag One</span>
-        <span>Tag Two</span>
-      </div>
-      <a class="learn-more" href="#">Learn More →</a>
-    </article>
-    <!-- ===== end duplicate block ===== -->
-
+  <div class="tab-panel" id="panel-coopersurgical" role="tabpanel">
+    
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="project-entry">
+        <h3>[Project Name] – [Short Subtitle]</h3>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/project-image-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+        </div>
+        <div class="project-meta">
+          <p><strong>Goal:</strong> One or two sentences on the problem this project solved and what you were asked to deliver.</p>
+          <p><strong>Tools Used:</strong> [Software / hardware / methods, e.g. CAD tool, analysis tool, language].</p>
+          <h4>Challenges</h4>
+          <ul>
+            <li>A constraint you had to design around.</li>
+            <li>A technical or resource limitation you worked within.</li>
+            <li>A trade-off you had to balance.</li>
+          </ul>
+          <h4>Results / Learnings</h4>
+          <ul>
+            <li>A measurable outcome (%, time, cost, performance).</li>
+            <li>Something the work enabled or unblocked.</li>
+            <li>A trade-off or lesson you took away from it.</li>
+          </ul>
+        </div>
+      </article>
+    
+    <div class="gallery-section">
+      <p class="section-label">Gallery</p>
+      <div class="carousel">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+            <img class="carousel-slide" src="images/gallery-placeholder.jpg" alt="" />
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
+          <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
+          <span class="carousel-counter" aria-live="polite">1 / 6</span>
+        </div>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer wrap">
   <p>© 2026 Your Name. Built with HTML, CSS &amp; hosted on GitHub Pages.</p>
-  <div class="footer-links">
-    <a href="mailto:you@example.com">Email</a>
-    <a href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
 </footer>
 
 <script src="js/script.js"></script>
