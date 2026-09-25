@@ -253,7 +253,8 @@ button:focus-visible {
 .frame img {
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover */
+  background: var(--navy-900); /* Blends empty space with background */
   filter: grayscale(15%);
 }
 .frame .corner {
@@ -406,7 +407,7 @@ button:focus-visible {
 .project-card .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover */
 }
 
 .project-card h3 { font-size: 1.05rem; margin-bottom: 0.4em; }
@@ -508,7 +509,7 @@ button:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s ease;
