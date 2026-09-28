@@ -166,7 +166,7 @@
   <div class="tab-panel" id="panel-tesla" role="tabpanel">
     
       <article class="project-entry">
-        <h3>Bucket Weight Detection – Safety/Ergonomics Improvements</h3>
+        <h3>Bucket Weight Detection System – Safety & Ergonomics</h3>
         <div class="carousel">
           <div class="carousel-track">
             <img class="carousel-slide active" src="images/project-image-placeholder21.jpg" alt="" />
@@ -178,24 +178,23 @@
           <span class="carousel-counter" aria-live="polite">1 / 3</span>
         </div>
         <div class="project-meta">
-          <p><strong>Goal:</strong> Create a system to detect when purge bucket was full to be switched out.</p>
+          <p><strong>Objective:</strong> Produced a spring-loaded scale mechanism to continuously monitor purge bucket capacity, alerting associates via an HMI to prevent overfill and enhance operational safety.</p>
           <p><strong>Tools Used:</strong> SolidWorks</p>
           <h4>Challenges</h4>
           <ul>
-            <li>Alert the HMI (Human Machine Interface) when the bucket reached a weight of 25 lbs. (Maximum allowable weight for operator safety)</li>
-            <li>Had to have a max height of 3 in. to not interfere with path of robot.</li>
-            <li>Needed to be designed in a way that prevented accidental triggering during maintenance.</li>
+            <li>Alerted the HMI (Human Machine Interface) when the bucket reached a weight of 25 lbs. (Maximum allowable weight for operator safety)</li>
+            <li>Restricted the mechanism to a maximum height of 3 inches to prevent physical interference with the automated robot's operational path.</li>
+            <li>Designed in a way that prevented accidental triggering during maintenance.</li>
           </ul>
           <h4>Results / Learnings</h4>
           <ul>
-            <li>Built a spring-loaded mechanism to detect bucket weight.</li>
-            <li>Calculating total weight of the bucket and upper plate I selected a spring with appropriate stiffness that would allow a descent of 6mm when the bucket reached 25 lbs.</li>
+            <li>Utilized SolidWorks to model the complete assembly, calculating the combined mass of the bucket and upper plate to specify a spring stiffness that achieves exactly 6mm of linear descent at the 25 lb. threshold.</li>
             <li>Designated an inductive sensor to trigger the HMI when the bucket descended in a certain orientation to only detect that upper plate. </li>
           </ul>
         </div>
       </article>
       <article class="project-entry">
-        <h3>Cell Pickup Fixture – Quality and Efficiency Improvements</h3>
+        <h3>Cell Pickup Fixture – Quality & Efficiency</h3>
         <div class="carousel">
           <div class="carousel-track">
             <img class="carousel-slide active" src="images/project-image-placeholder24.jpg" alt="" />
@@ -207,19 +206,19 @@
           <span class="carousel-counter" aria-live="polite">1 / 3</span>
         </div>
         <div class="project-meta">
-          <p><strong>Goal:</strong> Prevent cells from being missed or damaged during the pickup process.</p>
+          <p><strong>Objective:</strong> Applied Geometric Dimensioning and Tolerancing (GD&T) to design a high-precision locating plate for automated cell pickup, preventing component damage and eliminating missed cells during gantry operations.</p>
           <p><strong>Tools Used:</strong> SolidWorks, Excel</p>
           <h4>Challenges</h4>
           <ul>
-            <li>Find the root cause of the issue.</li>
-            <li>Create a new way of setting the cell boxes in a fixed position relative to the gantry.</li>
-            <li>Consider the impact of the new design on the overall assembly process and make necessary adjustments.</li>
+            <li>Investigated and identified the root cause of systemic gantry pickup errors that resulted in 3-4 missed cells per pallet on the second box.</li>
+            <li>Engineered a mechanical solution to secure cardboard cell boxes in a fixed, repeatable position relative to the automated gantry system.</li>
+            <li>Adapted existing assembly line constraints to integrate the new fixture without disrupting overarching manufacturing workflows.</li>
           </ul>
           <h4>Results / Learnings</h4>
           <ul>
-            <li>Discovered that the issue was caused by a missing datum between the two cardboard boxes (3-4 cells/pallet missed on the second box).</li>
-            <li>Designed a plate that housed the cell boxes with a 5mm wall, used GD&T for precise positioning.</li>
-            <li>Widened the slot of a locator plate above the pallet to accommodate the new fixture as well as reprogram the pallet stopping points to consider the new position of the boxes.</li>
+            <li>Diagnosed positional drift caused by a missing physical datum between consecutive cardboard cell boxes.</li>
+            <li>Utilized SolidWorks and strict GD&T principles to design a robust locating plate featuring a 5mm retaining wall to ensure precise, repeatable positioning.</li>
+            <li>Integrated the physical solution by widening the slot of the overhead locator plate while reprogramming the automated pallet stopping coordinates to accommodate the new fixture.</li>
           </ul>
         </div>
       </article>
@@ -229,26 +228,25 @@
           <div class="carousel-track">
             <img class="carousel-slide active" src="images/project-image-placeholder27.jpg" alt="" />
             <img class="carousel-slide" src="images/project-image-placeholder28.jpg" alt="" />
-            <img class="carousel-slide" src="images/project-image-placeholder29.jpg" alt="" />
           </div>
           <button type="button" class="carousel-btn prev" aria-label="Previous photo">&lsaquo;</button>
           <button type="button" class="carousel-btn next" aria-label="Next photo">&rsaquo;</button>
-          <span class="carousel-counter" aria-live="polite">1 / 3</span>
+          <span class="carousel-counter" aria-live="polite">1 / 2</span>
         </div>
         <div class="project-meta">
-          <p><strong>Goal:</strong> Design and create a fixture that could hold and dissipate energy from cells for safe deformation testing.</p>
+          <p><strong>Objective:</strong>Fabricated additively manufactured jigs to safely discharge batteries for cell deformation testing, optimizing the workflow to process 8 cells per 30 minutes.</p>
           <p><strong>Tools Used:</strong> SolidWorks</p>
           <h4>Challenges</h4>
           <ul>
-            <li>Had to hold at least 4 cells and be portable.</li>
-            <li>Needed to let the operator know when the cells reached the desired energy level.</li>
-            <li>Required an electrical system to exchange energy from cells to the load.</li>
+            <li>Engineered a portable test fixture capable of securely housing multiple battery cells while facilitating controlled energy transfer to an external load.</li>
+            <li>Required real-time telemetry to alert operators when individual cells reached targeted energy depletion thresholds.</li>
+            <li>Mitigated unexpectedly high thermal loads generated by the electrical discharge system to maintain safe operating temperatures.</li>
           </ul>
           <h4>Results / Learnings</h4>
           <ul>
-            <li>3D printed the fixture that housed 8 cells each with a screen showing the energy levels the designated cell.</li>
-            <li>With the help of another intern, integrated an electrical system consisting of resistors, microcontrollers, and rechargeable battery (the load).</li>
-            <li>The resistors produced higher heat than expected, so I created platforms (fins) to improve heat dissipation and added fans on either side.</li>
+            <li>Utilized SolidWorks to design and 3D print a custom fixture accommodating 8 individual cells, integrating dedicated digital screens for real-time energy monitoring of each unit.</li>
+            <li>Collaborated cross-functionally to integrate a custom electrical discharge network utilizing discrete resistors, microcontrollers, and a rechargeable battery load.</li>
+            <li>Optimized the system's thermal management by designing integrated cooling fins and mounting dual-sided fans, effectively dissipating the excess heat generated by the resistor bank.</li>
           </ul>
         </div>
       </article>
@@ -286,18 +284,18 @@
           <span class="carousel-counter" aria-live="polite">1 / 3</span>
         </div>
         <div class="project-meta">
-          <p><strong>Goal:</strong> Instead of having techncians switch out the fixtures when a different catheter is on the manufacturing line, I designed a single fixture compatible with both types of catheters.</p>
+          <p><strong>Objective:</strong> Prototyped and refined a universal tooling design to eliminate manufacturing line changeovers, creating a single fixture compatible with multiple catheter profiles.</p>
           <p><strong>Tools Used:</strong> SolidWorks/3D Printing</p>
           <h4>Challenges</h4>
           <ul>
-            <li>Had to design a fixture that could fit a smaller and larger diameter catheter snug in place.</li>
-            <li>Worked on improving other aspects of the design, adding extrusions to prevent other features of the catheter from popping out.</li>
+            <li>Engineered a dual-compatibility holding mechanism capable of securely retaining both small and large-diameter catheters during assembly operations.</li>
+            <li>Iterated upon the existing fixture architecture by integrating custom extrusions to prevent supplementary catheter components from dislodging under tension.</li>
           </ul>
           <h4>Results / Learnings</h4>
           <ul>
-            <li>Increased overall line efficiency by 7%.</li>
-            <li>Designed a figure-8 style slot to hold both types of catheters.</li>
-            <li>I learned the importance of using inputs from the technician on the line to improve my designs. </li>
+            <li>Utilized SolidWorks and 3D printing for rapid prototyping, translating direct feedback from line technicians and the validation team into actionable design improvements.</li>
+            <li>Developed an innovative figure-8 slot geometry that reliably secured both catheter variants without requiring physical changeovers.</li>
+            <li>Boosted overall line efficiency (OLE) by 7%.</li>
           </ul>
         </div>
       </article>
@@ -314,24 +312,24 @@
           <span class="carousel-counter" aria-live="polite">1 / 3</span>
         </div>
         <div class="project-meta">
-          <p><strong>Goal:</strong> Update the asset management system to improve tracking and maintenance scheduling for machinery.</p>
+          <p><strong>Objective:</strong> Led the comprehensive task of cataloging all 522 facility assets into a third-party management system, working alongside technicians to create and standardize maintenance schedules for each piece of equipment.</p>
           <p><strong>Tools Used:</strong> Excel</p>
           <h4>Challenges</h4>
           <ul>
-            <li>Some machinery did not have IDs assigned, so I had to work through different teams to add them to the system.</li>
-            <li>For machines without maintenance instructions, I had to read the manual from the manufacturer or interview the assigned technician.</li>
-            <li>Collaborated with technicians to replace randomized machine assignments with a monthly rotation schedule optimized for the facility's layout.</li>
+            <li>Addressed missing identification data for undocumented machinery by collaborating with cross-functional teams to assign formal IDs and integrate them into the centralized database.</li>
+            <li>Overcame a lack of existing maintenance protocols by analyzing manufacturer manuals and conducting targeted interviews with subject-matter expert technicians to synthesize required procedures.</li>
+            <li>Replaced inefficient, randomized machine assignment practices with a structured, monthly rotation schedule optimized for the facility's physical layout.</li>
           </ul>
           <h4>Results / Learnings</h4>
           <ul>
-            <li>Cataloged a total of 522 machines into Blue Mountain (the asset management system).</li>
-            <li>Updated maintenance schedules for all cataloged machines, improving tracking and reducing downtime.</li>
-            <li>Created a set of standardized maintenance procedures with an assigned code for quicker updates on new machinery.</li>
+            <li>Successfully audited and cataloged a total of 522 individual machines into the Blue Mountain asset management system.</li>
+            <li>Partnered directly with line technicians to establish rigorous, updated maintenance schedules across all assets, significantly improving tracking accuracy and reducing equipment downtime.</li>
+            <li>Authored a standardized set of maintenance procedures, implementing a new coding structure to accelerate the system integration and updating of future machinery.</li>
           </ul>
         </div>
       </article>
       <article class="project-entry">
-        <h3>Product Design – Integrating existing Products/Tools into the Company system as CAD</h3>
+        <h3>Product Design – Reverse Engineering & CAD System Integration</h3>
         <div class="carousel">
           <div class="carousel-track">
             <img class="carousel-slide active" src="images/project-image-placeholder37.jpg" alt="" />
@@ -344,18 +342,18 @@
           <span class="carousel-counter" aria-live="polite">1 / 4</span>
         </div>
         <div class="project-meta">
-          <p><strong>Goal:</strong> Design parts/products that existed on the manufacturing floor with no previous documentation.</p>
+          <p><strong>Objective:</strong> Reverse-engineered undocumented physical components and legacy tools directly from the manufacturing floor, integrating them into the company's digital CAD database.</p>
           <p><strong>Tools Used:</strong> SolidWorks</p>
           <h4>Challenges</h4>
           <ul>
-            <li>Had to create complex surfaces from limited reference materials.</li>
-            <li>Added new features to the design based on feedback from the manufacturing team.</li>
-            <li>Created sketches that took into account design for manufacturing constraints.</li>
+            <li>Modeled complex surface geometries utilizing limited physical reference materials and dimensional data.</li>
+            <li>Incorporated strict Design for Manufacturing (DFM) constraints into all CAD sketches to ensure components were optimized for physical production.</li>
+            <li>Iterated upon existing baseline designs by integrating functional feature enhancements driven by direct feedback from the manufacturing team.</li>
           </ul>
           <h4>Results / Learnings</h4>
           <ul>
-            <li>A total of 19 parts/products were designed and documented.</li>
-            <li>These designs were integral in creating fixtures/workstations that interacted with the designed parts.</li>
+            <li>Utilized SolidWorks to precisely model, dimension, and formally document a total of 19 distinct manufacturing components.</li>
+            <li>Generated highly accurate 3D models that were directly utilized as foundational geometry to develop new, fully compatible workstations and custom fixtures for the assembly line.</li>
           </ul>
         </div>
       </article>
