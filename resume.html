@@ -9,6 +9,94 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
+<style>
+  /* Embedded styles for the Interactive Gantt Chart */
+  .gantt-section {
+    margin: 3rem auto 2rem;
+  }
+  .gantt-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .gantt-chart {
+    position: relative;
+    min-width: 800px; /* Ensures timeline doesn't compress too much on mobile */
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding-top: 1rem;
+  }
+  .gantt-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .gantt-grid-line {
+    flex: 1;
+    border-right: 1px dashed #ccc;
+  }
+  .gantt-row {
+    position: relative;
+    height: 40px;
+    margin-bottom: 12px;
+    z-index: 1;
+  }
+  .gantt-bar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    min-width: max-content; /* Ensures text is always readable for short durations */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .gantt-bar:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+  .gantt-bar.edu {
+    background-color: #555;
+  }
+  .gantt-bar.edu:hover {
+    background-color: #777;
+  }
+  .gantt-labels {
+    display: flex;
+    min-width: 800px;
+    margin-top: 8px;
+  }
+  .gantt-label {
+    flex: 1;
+    text-align: right;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    padding-right: 4px;
+  }
+  /* Offset for anchor links so they don't get hidden behind a fixed header (if any) */
+  .entry {
+    scroll-margin-top: 2rem;
+  }
+</style>
 </head>
 <body>
 
@@ -40,47 +128,91 @@
       <p class="section-label">Resume</p>
       <h1>Where I've worked &amp; studied.</h1>
     </div>
-    <!-- EDIT: link this to a PDF of your resume in /images or /files -->
     <a class="btn primary" href="files/resume.pdf" target="_blank" rel="noopener">Download PDF</a>
   </div>
 </header>
+
+<!-- ============ GANTT CHART ============ -->
+<section class="resume-section wrap gantt-section">
+  <p class="section-label">Timeline overview</p>
+  <div class="gantt-wrapper">
+    <div class="gantt-chart">
+      <div class="gantt-grid">
+        <div class="gantt-grid-line"></div><!-- 2020 -->
+        <div class="gantt-grid-line"></div><!-- 2021 -->
+        <div class="gantt-grid-line"></div><!-- 2022 -->
+        <div class="gantt-grid-line"></div><!-- 2023 -->
+        <div class="gantt-grid-line"></div><!-- 2024 -->
+        <div class="gantt-grid-line"></div><!-- 2025 -->
+        <div class="gantt-grid-line"></div><!-- 2026 -->
+      </div>
+      
+      <div class="gantt-row">
+        <a href="#edu-ufl" class="gantt-bar edu" style="left: 9.2%; width: 61.7%;">University of Florida (BS)</a>
+      </div>
+      <div class="gantt-row">
+        <a href="#exp-gator" class="gantt-bar" style="left: 35.8%; width: 20.6%;">Gator Motorsports</a>
+      </div>
+      <div class="gantt-row">
+        <a href="#exp-cooper" class="gantt-bar" style="left: 48.4%; width: 3.2%;">CooperSurgical</a>
+      </div>
+      <div class="gantt-row">
+        <a href="#exp-tesla" class="gantt-bar" style="left: 57.4%; width: 7.0%;">Tesla</a>
+      </div>
+      <div class="gantt-row">
+        <a href="#exp-ford-lean" class="gantt-bar" style="left: 76.3%; width: 3.2%;">Ford (Lean)</a>
+      </div>
+      <div class="gantt-row">
+        <a href="#edu-columbia" class="gantt-bar edu" style="left: 81.1%; width: 18.6%;">Columbia University (MS)</a>
+      </div>
+      <div class="gantt-row">
+        <a href="#exp-ford-robotics" class="gantt-bar" style="left: 91.9%; width: 2.9%;">Ford (Robotics)</a>
+      </div>
+    </div>
+    <div class="gantt-labels">
+      <div class="gantt-label">2020</div>
+      <div class="gantt-label">2021</div>
+      <div class="gantt-label">2022</div>
+      <div class="gantt-label">2023</div>
+      <div class="gantt-label">2024</div>
+      <div class="gantt-label">2025</div>
+      <div class="gantt-label">2026</div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ EXPERIENCE ============ -->
 <section class="resume-section wrap">
   <p class="section-label">Experience</p>
   <div class="timeline">
 
-    <div class="entry">
+    <div class="entry" id="exp-ford-robotics">
       <div class="dates">06/2026 — 08/2026</div>
       <div>
         <h3>Robotics Product Intern</h3>
         <div class="org">Ford Motor Company · Dearborn, MI</div>
         <ul>
-          <li>Designed and programmed an open-perimeter safety system using AutoDesk Inventor and SICK PLC Safety Designer, integrating laser
-scanners and wireless E-stops across fail-safe fault states to replace physical cell guarding.</li>
-          <li>Engineered an EOAT gripper for an AMR manipulator, maintaining less than1-inch operational clearance while limiting mechanical deflection
-during dynamic payload transfers.</li>
-          <li>Executed full tear downs and rebuilds of prototype manipulators, applying DFM/DFA modifications that eliminated wire harness pinch
-points and minimized maintenance cycle times.</li>
+          <li>Designed and programmed an open-perimeter safety system using AutoDesk Inventor and SICK PLC Safety Designer, integrating laser scanners and wireless E-stops across fail-safe fault states to replace physical cell guarding.</li>
+          <li>Engineered an EOAT gripper for an AMR manipulator, maintaining less than 1-inch operational clearance while limiting mechanical deflection during dynamic payload transfers.</li>
+          <li>Executed full tear downs and rebuilds of prototype manipulators, applying DFM/DFA modifications that eliminated wire harness pinch points and minimized maintenance cycle times.</li>
         </ul>
       </div>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="exp-ford-lean">
       <div class="dates">05/2025 — 07/2025</div>
       <div>
         <h3>Lean Manufacturing Intern</h3>
         <div class="org">Ford Motor Company · Dearborn, MI</div>
         <ul>
           <li>Created and standardized manufacturing workflows across 3 production lines, reducing recurring issue-resolution time by 30%.</li>
-          <li>Implemented contamination source mapping and OEE/OLE performance metrics to identify production losses and standardize quality
-and efficiency procedures.</li>
+          <li>Implemented contamination source mapping and OEE/OLE performance metrics to identify production losses and standardize quality and efficiency procedures.</li>
           <li>Developed operator training tools and maintenance-path visualizations to improve execution consistency and line accuracy by 20%.</li>
         </ul>
       </div>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="exp-tesla">
       <div class="dates">01/2024 — 07/2024</div>
       <div>
         <h3>Manufacturing Equipment Engineer Intern</h3>
@@ -88,8 +220,7 @@ and efficiency procedures.</li>
         <ul>
           <li>Designed and built sensor mounts to detect datum drift and prevent motor issues, cutting down battery pack scrap by 3 per month.</li>
           <li>Fabricated additively manufactured jigs to discharge batteries for cell deformation testing, at a rate of 8 cells per 30 minutes.</li>
-          <li>Eliminated 5 daily unscheduled downtimes by redesigning RFID reader fixtures with weldments instead of fasteners to minimize
-operational vibrations.</li>
+          <li>Eliminated 5 daily unscheduled downtimes by redesigning RFID reader fixtures with weldments instead of fasteners to minimize operational vibrations.</li>
           <li>Saved $200k annually in scrap by utilizing proximity sensors and fixtures to track container positions and expiration dates.</li>
           <li>Reduced headcount by 1 and saved $100k annually by applying GD&T to design a high precision locating plate for auto cell pickup.</li>
           <li>Produced a spring-loaded scale to alert associates when purge bucket dropped below 25 lbs., preventing overfill and enhancing safety.</li>
@@ -97,21 +228,20 @@ operational vibrations.</li>
       </div>
     </div>
 
-    <div class="entry">
-      <div class="dates">05/2023 — 07/2023</div>
+    <div class="entry" id="exp-cooper">
+      <div class="dates">05/2023 — 08/2023</div>
       <div>
         <h3>Manufacturing Engineer Intern</h3>
         <div class="org">CooperSurgical Inc. · Trumbull, CT</div>
         <ul>
-          <li>Led task of cataloging all 522 assets in facility through a third-party system and worked with technicians to create maintenance
-schedules for each asset.</li>
+          <li>Led task of cataloging all 522 assets in facility through a third-party system and worked with technicians to create maintenance schedules for each asset.</li>
           <li>Boosted overall line efficiency (OLE) by 7% using SolidWorks and 3D printing for rapid prototyping of manufacturing improvements.</li>
           <li>Increased assembly efficiency by 15% by prototyping and refining tool designs with the validation team.</li>
         </ul>
       </div>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="exp-gator">
       <div class="dates">07/2022 — 12/2023</div>
       <div>
         <h3>Tractive System Engineer</h3>
@@ -124,7 +254,6 @@ schedules for each asset.</li>
       </div>
     </div>
 
-    <!-- Duplicate an .entry block above for each additional role -->
   </div>
 </section>
 
@@ -133,11 +262,11 @@ schedules for each asset.</li>
   <p class="section-label">Education</p>
   <div class="timeline">
 
-    <div class="entry">
+    <div class="entry" id="edu-columbia">
       <div class="dates">2025 — 2026</div>
       <div>
-        <h3>Master of Science, Mechanical Engineering</h3>
-        <div class="org">Columbia University</div>
+        <h3>Columbia University</h3>
+        <div class="org">Master of Science, Mechanical Engineering</div>
         <ul>
           <li>Relevant coursework: Mechanics and Thermodynamics of Propulsion, CFD for Aero Applications, Rapid Prototyping for Aero Products, Space Vehicle Dynamics.</li>
           <li>2025 GEM Fellowship Recipient.</li>
@@ -145,19 +274,18 @@ schedules for each asset.</li>
       </div>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="edu-ufl">
       <div class="dates">2020 — 2024</div>
       <div>
-        <h3>Bachelor of Science, Mechanical Engineering</h3>
-        <div class="org">University of Florida</div>
+        <h3>University of Florida</h3>
+        <div class="org">Bachelor of Science, Mechanical Engineering</div>
         <ul>
           <li>Relevant coursework: Statics, Dynamics, Materials Science, Heat Transfer, Fluid Mechanics, Vehicle Design</li>
-          <li>Formula SAE (Gatormotorsports) - Drivetrain Team Member</li>
+          <li>Formula SAE (Gatormotorsports) - Tractive System Engineer</li>
         </ul>
       </div>
     </div>
 
-    <!-- Duplicate for a second degree, certification, etc. -->
   </div>
 </section>
 
@@ -176,7 +304,6 @@ schedules for each asset.</li>
         <span class="chip">Lean Six Sigma</span>
         <span class="chip">Free Body Diagrams</span>
         <span class="chip">Manual Milling & Lathing</span>
-        </span>
       </div>
     </div>
     <div class="skills-group">
